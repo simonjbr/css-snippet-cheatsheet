@@ -1,0 +1,110 @@
+:root {
+    --main-bg-color: #333940;
+    --main-border-color: #e4ede8;
+    --main-text-color: #e867ed;
+}
+
+* {
+    background: var(--main-bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--main-text-color);
+}
+
+header p {
+    text-align: center;
+    color: var(--main-border-color);
+    display: block;
+    font-size: 14px;
+    margin: 14px 50px;
+}
+
+
+#card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    border: 2px var(--main-border-color) dashed;
+    /* min-width: 250px;
+    max-width: 200px; */
+    width: 30%;
+    color: var(--main-text-color);
+    margin: 15px 10px;
+}
+
+.card-header {
+    position: absolute;
+    width: 90%;
+    border: 2px var(--main-border-color) solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    top: -20px;
+    left: 4.5%;
+
+}
+
+.card:hover,
+.card:hover .card-header {
+    box-shadow: 0 0 3px 3px var(--main-text-color);
+    border: 2px white dashed;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.card p {
+    font-size: 14px;
+    margin: 14px;
+}
+
+.code-block {
+    color: #d1d2d7;
+    font-family: Consolas;
+    font-size: 14px;
+    /* background-color: #e867ed; */
+    /* box-shadow: 1px 5px 20px 1px inset black;; */
+    background: linear-gradient(black, var(--main-text-color));
+    border-radius: 5px;
+    -webkit-user-select: all;
+    user-select: all;
+    padding: 10px;
+    width: 80%;
+    margin-left: 7%;
+    overflow: hidden;
+}
+
+.code-block:hover {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer h2 {
+    color: var(--main-text-color);
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
